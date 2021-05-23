@@ -15,7 +15,8 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-
+    <!-- incluide the styles-->
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Ristorante Con Fusion</title>
   </head>
 
@@ -46,14 +47,15 @@
         </header> -->
 
     <!---->
-    <header class="container-fluid py-5 bg-light">
+    <!-- adding the class jumbotron we had to remove the bg-light class to make it work -->
+    <header class="container-fluid py-5 jumbotron">
       <!-- container-fluid takes the whole columns for width -->
       <!-- text-sm-center center the content -->
       <!-- p-5 padding ? -->
       <!-- py-5 padding top and bottom ? -->
       <!-- bg-light modify the background color-->
       <div class="container">
-        <div class="row">
+        <div class="row row-header">
           <div class="col-12 col-sm-6">
             <!-- class="display-2" change the font type -->
             <h1>Ristorante con Fusion</h1>
@@ -72,7 +74,9 @@
     <!---->
 
     <div class="container">
-      <div class="row">
+      <!-- vertical align in the center -->
+      <!-- like in excel put it vertical on the mid -->
+      <div class="row row-content align-items-center">
         <!-- order -->
         <!-- this put the content on the left and the tittle on the right (it means it swape the positions)-->
         <div class="col-12 col-sm-4 order-sm-last col-md-3">
@@ -89,7 +93,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 col-md-3">
           <h3>This Month's Promotions</h3>
         </div>
@@ -104,7 +108,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 order-sm-last col-md-3">
           <h3>Meet our Culinary Specialists</h3>
         </div>
@@ -121,13 +125,16 @@
       </div>
     </div>
 
-    <footer>
+    <!-- decided to modify the class of the footer to get the same result as the teacher-->
+    <!-- and put it on the footer instead of the div -->
+    <footer class="container-fluid footer">
       <div class="container">
         <div class="row">
           <!-- offset to move everything 1 column -->
           <div class="col-4 offset-1 col-sm-2">
             <h5>Links</h5>
-            <ul>
+            <!-- remove the point for the ul -->
+            <ul class="list-unstyled">
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Menu</a></li>
@@ -145,8 +152,12 @@
               Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
             </address>
           </div>
-          <div class="col-12 col-sm-4">
-            <div>
+          <!-- vertical center -->
+          <!-- why self ? -->
+          <!-- this is aplied to the div that use this class-->
+          <div class="col-12 col-sm-4 align-self-center">
+            <!-- center the links -->
+            <div class="text-center">
               <a href="http://google.com/+">Google+</a>
               <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
               <a href="http://www.linkedin.com/in/">LinkedIn</a>
@@ -156,7 +167,8 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <!-- horizontal alignment -->
+        <div class="row footer justify-content-center">
           <div class="col-auto">
             <p>© Copyright 2018 Ristorante Con Fusion</p>
           </div>
