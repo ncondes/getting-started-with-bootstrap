@@ -28,6 +28,15 @@ address {
   margin: 0px;
   color: #0f0f0f;
 }
-footer a {
+a {
   text-decoration: none;
+}
+
+body {
+  /* for fix the nav bar that is taking space of the body add padding*/
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+.navbar-dark {
+  background-color: #512da8;
 }

@@ -26,6 +26,40 @@
   <!-- 3. -->
 
   <body>
+    <!-- add nav bar-->
+    <!-- navbar: base / navbar-dark: for a dark navbar / navbar-expand-sm: in xs and sm screens the navbar will collapse / bg-primary : blue background color / fixed-top : fixed the nav bar-->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+      <div class="container">
+        <!--Name of the company / Logo-->
+        <a class="navbar-brand mr-auto" href="#">Ristorante Con Fusion</a>
+        <!-- Creating a responsive nav bar-->
+        <!-- depending on if you put the button code before or after the navbar-brand the desplegable menu will be on the right or left side-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#Navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--mr-auto: right margin-->
+        <!-- will be push as left as posible-->
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <!-- this way for add items to the nav bar-->
+            <!-- for the active class this have to be in the <a> class NOT in the <li> class-->
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- separate the jumbotron from the rest of the content -->
     <!-- Bootstrap 5.0 removed jumbotron -->
     <!--   -->
@@ -136,7 +170,7 @@
             <!-- remove the point for the ul -->
             <ul class="list-unstyled">
               <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="aboutus.html">About</a></li>
               <li><a href="#">Menu</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
