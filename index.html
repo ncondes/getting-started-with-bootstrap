@@ -44,7 +44,9 @@
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
       <div class="container">
         <!--Name of the company / Logo-->
-        <a class="navbar-brand mr-auto" href="#">Ristorante Con Fusion</a>
+        <a class="navbar-brand mr-auto" href="#"
+          ><img src="img/logo.png" height="30" width="41"
+        /></a>
         <!-- Creating a responsive nav bar-->
         <!-- depending on if you put the button code before or after the navbar-brand the desplegable menu will be on the right or left side-->
         <button
@@ -126,7 +128,9 @@
             </p>
           </div>
           <!-- col-sm will ocupate the remaining width (6 this case) -->
-          <div class="col-12 col-sm"></div>
+          <div class="col-12 col-sm align-self-center">
+            <img src="img/logo.png" class="img-fluid" />
+          </div>
         </div>
       </div>
     </header>
@@ -143,12 +147,22 @@
         </div>
         <!-- for xs block, for sm, ocupathe the remaining widh and ssame for md-->
         <div class="col col-sm order-sm-first col-md">
-          <h2>Uthappizza</h2>
-          <p>
-            A unique combination of Indian Uthappam (pancake) and Italian pizza,
-            topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia
-            onion, Guntur chillies and Buffalo Paneer.
-          </p>
+          <div class="media">
+            <img
+              class="d-flex mr-3 img-thumbnail align-self-center"
+              src="img/uthappizza.png"
+              alt="uthapizza"
+            />
+            <div class="media-body">
+              <!--mt-0 doesnt work ?-->
+              <h2 class="mt-0">Uthappizza</h2>
+              <p class="d-none d-sm-block">
+                A unique combination of Indian Uthappam (pancake) and Italian
+                pizza, topped with Cerignola olives, ripe vine cherry tomatoes,
+                Vidalia onion, Guntur chillies and Buffalo Paneer.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -172,14 +186,23 @@
           <h3>Meet our Culinary Specialists</h3>
         </div>
         <div class="col col-sm order-sm-first col-md">
-          <h2>Alberto Somayya</h2>
-          <h4>Executive Chef</h4>
-          <p>
-            Award winning three-star Michelin chef with wide International
-            experience having worked closely with whos-who in the culinary
-            world, he specializes in creating mouthwatering Indo-Italian fusion
-            experiences.
-          </p>
+          <div class="media">
+            <img
+              src="img/alberto.png"
+              class="d-flex mr-3 img-thumbnail align-self-center"
+              alt="alberto"
+            />
+            <div class="media-body">
+              <h2 class="mt-0">Alberto Somayya</h2>
+              <h4>Executive Chef</h4>
+              <p class="d-none d-sm-block">
+                Award winning three-star Michelin chef with wide International
+                experience having worked closely with whos-who in the culinary
+                world, he specializes in creating mouthwatering Indo-Italian
+                fusion experiences.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
