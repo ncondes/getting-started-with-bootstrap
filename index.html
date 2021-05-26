@@ -45,7 +45,7 @@
       <div class="container">
         <!--Name of the company / Logo-->
         <a class="navbar-brand mr-auto" href="#"
-          ><img src="img/logo.png" height="30" width="41"
+          ><img src="img/logo.png" height="30" width="41" alt="logo-brand"
         /></a>
         <!-- Creating a responsive nav bar-->
         <!-- depending on if you put the button code before or after the navbar-brand the desplegable menu will be on the right or left side-->
@@ -84,11 +84,16 @@
               >
             </li>
           </ul>
-          <span class="navbar-text">
-            <a data-bs-toggle="modal" data-bs-target="#loginModal">
-              <span class="fas fa-sign-in-alt"></span> Login
-            </a>
-          </span>
+          <!-- login button -->
+          <!-- this way to display the position of login could be better -->
+          <div class="offset-sm-4 offset-md-6 offset-lg-7">
+            <span class="navbar-text">
+              <a data-bs-toggle="modal" data-bs-target="#loginModal">
+                <span class="fas fa-sign-in-alt"></span> Login
+              </a>
+            </span>
+          </div>
+          <!---->
         </div>
       </div>
     </nav>
@@ -179,7 +184,7 @@
           </div>
           <!-- col-sm will ocupate the remaining width (6 this case) -->
           <div class="col-12 col-sm-3 align-self-center">
-            <img src="img/logo.png" class="img-fluid" />
+            <img src="img/logo.png" class="img-fluid" alt="logotype" />
           </div>
           <div class="col-12 col-sm-3 align-self-center text-center">
             <!-- button -->
@@ -199,7 +204,122 @@
         </div>
       </div>
     </header>
-    <!---->
+
+    <!-- Adding a Carousel-->
+    <div class="container">
+      <div class="row row-content">
+        <div class="col">
+          <div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- this add the indicators on the bottom of the carousel-->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#mycarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#mycarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#mycarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img
+                  class="d-block img-fluid"
+                  src="/img/uthappizza.png"
+                  alt="uthappizza"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>
+                    Uthappizza
+                    <span class="badge bg-danger">HOT</span>
+                    <span class="badge rounded-pill bg-secondary">$4.99</span>
+                  </h2>
+                  <p class="d-none d-sm-block mb-0">
+                    A unique combination of Indian Uthappam (pancake) and
+                    Italian pizza, topped with Cerignola olives, ripe vine
+                    cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo
+                    Paneer.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block img-fluid"
+                  src="/img/buffet.png"
+                  alt="buffet"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>
+                    Weekend Grand Buffet
+                    <span class="badge bg-danger">NEW</span>
+                  </h2>
+                  <p class="d-none d-sm-block">
+                    Featuring mouthwatering combinations with a choice of five
+                    different salads, six enticing appetizers, six main entrees
+                    and five choicest desserts. Free flowing bubbly and soft
+                    drinks. All for just $19.99 per person
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  class="d-block img-fluid"
+                  src="/img/alberto.png"
+                  alt="alberto"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>Alberto Somayya</h2>
+                  <h4>Executive Chef</h4>
+                  <p class="d-none d-sm-block">
+                    Award winning three-star Michelin chef with wide
+                    International experience having worked closely with whos-who
+                    in the culinary world, he specializes in creating
+                    mouthwatering Indo-Italian fusion experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- to add to controls at the sides of the carousel -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#mycarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#mycarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container">
       <!-- vertical align in the center -->
@@ -301,7 +421,7 @@
             <div class="card-body">
               <form id="reserveform">
                 <div class="form-group row">
-                  <label for="noguests" class="col-md-2 col-form-label"
+                  <label class="col-md-2 col-form-label"
                     >Number of Guests</label
                   >
                   <!-- the class form-control is for bootstrap -->
@@ -368,24 +488,12 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="dateandtime" class="col-md-2 col-form-label"
-                    >Date and Time</label
-                  >
+                  <label class="col-md-2 col-form-label">Date and Time</label>
                   <div class="col-md-4 col-form-label">
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="date"
-                      placeholder="Date"
-                    />
+                    <input type="date" class="form-control" id="date" />
                   </div>
                   <div class="col-md-4 col-form-label">
-                    <input
-                      type="time"
-                      class="form-control"
-                      id="time"
-                      placeholder="Time"
-                    />
+                    <input type="time" class="form-control" id="time" />
                   </div>
                   <div class="offset-md-2">
                     <button type="submit" class="btn btn-primary">
@@ -483,7 +591,11 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+
     <!-- inlcuide the javascript for tooltip -->
+    <!-- remove the javascript for the assignment 3-->
+    <!-- in order to do that i'm just gonna comment it-->
+
     <script>
       var tooltipTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="tooltip"]')
