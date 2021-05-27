@@ -30,6 +30,7 @@
     />
     <!-- incluide the styles-->
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
     <title>Ristorante Con Fusion</title>
   </head>
 
@@ -472,22 +473,13 @@
 
             <!-- Adding the carousel play & pause control buttons-->
 
-            <div class="btn-group" role="group" id="carouselButton">
-              <button
-                class="btn btn-danger btn-sm"
-                type="button"
-                id="carousel-pause"
-              >
-                <span class="fas fa-pause"></span>
-              </button>
-              <button
-                class="btn btn-danger btn-sm"
-                type="button"
-                id="carousel-play"
-              >
-                <span class="fas fa-play"></span>
-              </button>
-            </div>
+            <button
+              class="btn btn-danger btn-sm"
+              type="button"
+              id="carouselButton"
+            >
+              <span class="fas fa-pause"></span>
+            </button>
 
             <!---->
           </div>
@@ -664,6 +656,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- {less} -->
+    <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -683,18 +678,21 @@
         interval: 2000,
       });
 
-      // pause the carousel on the click event
-      document
-        .getElementById("carousel-pause")
-        .addEventListener("click", function () {
-          carousel.pause();
-        });
+      var pauseButton = document.getElementById("carouselButton");
+      var playing = true;
 
-      // play the carousel on the click event
       document
-        .getElementById("carousel-play")
+        .getElementById("carouselButton")
         .addEventListener("click", function () {
-          carousel.cycle();
+          if (playing) {
+            pauseButton.innerHTML = `<span class="fas fa-play"></span>`;
+            playing = false;
+            carousel.pause();
+          } else {
+            pauseButton.innerHTML = `<span class="fas fa-pause"></span>`;
+            playing = true;
+            carousel.cycle();
+          }
         });
     </script>
   </body>
