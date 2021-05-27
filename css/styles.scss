@@ -74,3 +74,17 @@ body {
   bottom: 0px;
   z-index: 1;
 }
+
+.modal-body {
+  background-color: $background-pale;
+}
+.modal-footer {
+  background-color: $background-pale;
+}
+.modal-header {
+  .btn-close {
+    color: floralwhite;
+  }
+  background-color: $background-dark;
+  color: floralwhite;
+}

@@ -31,14 +31,16 @@
     <!-- incluide the styles-->
     <!-- to compile sass use sass live at the bottom side of the vsc use watch sass when you finish edditing the scss file-->
     <link rel="stylesheet" href="css/styles.css" />
+    <!--
     <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+    -->
     <title>Ristorante Con Fusion</title>
   </head>
 
   <!-- STEPS -->
   <!-- 1. class="container" -->
   <!-- 2. class="row"-->
-  <!-- 3. -->
+  <!-- 3. class="col-{screen size}-{number of col}"-->
 
   <body>
     <!-- add nav bar-->
@@ -90,7 +92,7 @@
           <!-- this way to display the position of login could be better -->
           <div class="offset-sm-4 offset-md-6 offset-lg-7">
             <span class="navbar-text">
-              <a data-bs-toggle="modal" data-bs-target="#loginModal">
+              <a role="button" id="loginButton">
                 <span class="fas fa-sign-in-alt"></span> Login
               </a>
             </span>
@@ -296,7 +298,10 @@
                   </div>
                 </div>
               </div>
-              <br />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <form>
               <div class="form-row">
                 <button
                   type="button"
@@ -346,12 +351,7 @@
             <!-- https://getbootstrap.com/docs/5.0/components/tooltips/ -->
 
             <!-- new button -->
-            <button
-              type="button"
-              class="btn btn-warning"
-              data-bs-toggle="modal"
-              data-bs-target="#assmodal"
-            >
+            <button type="button" class="btn btn-warning" id="reserveButton">
               Reserve a Table
             </button>
           </div>
@@ -694,6 +694,31 @@
             playing = true;
             carousel.cycle();
           }
+        });
+    </script>
+
+    <!-- JavaScript Assignment 4 -->
+
+    <!-- reserve a table button-->
+    <script>
+      var reserveModal = new bootstrap.Modal(
+        document.getElementById("assmodal")
+      );
+      document
+        .getElementById("reserveButton")
+        .addEventListener("click", function () {
+          reserveModal.show();
+        });
+    </script>
+    <!-- login button-->
+    <script>
+      var loginModal = new bootstrap.Modal(
+        document.getElementById("loginModal")
+      );
+      document
+        .getElementById("loginButton")
+        .addEventListener("click", function () {
+          loginModal.show();
         });
     </script>
   </body>

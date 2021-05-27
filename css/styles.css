@@ -66,4 +66,21 @@ body {
   bottom: 0px;
   z-index: 1;
 }
+
+.modal-body {
+  background-color: #d1c4e9;
+}
+
+.modal-footer {
+  background-color: #d1c4e9;
+}
+
+.modal-header {
+  background-color: #512da8;
+  color: floralwhite;
+}
+
+.modal-header .btn-close {
+  color: floralwhite;
+}
 /*# sourceMappingURL=styles.css.map */
