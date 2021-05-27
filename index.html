@@ -385,6 +385,7 @@
                 aria-label="Slide 3"
               ></button>
             </div>
+
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
                 <img
@@ -468,6 +469,27 @@
               ></span>
               <span class="visually-hidden">Next</span>
             </button>
+
+            <!-- Adding the carousel play & pause control buttons-->
+
+            <div class="btn-group" role="group" id="carouselButton">
+              <button
+                class="btn btn-danger btn-sm"
+                type="button"
+                id="carousel-pause"
+              >
+                <span class="fas fa-pause"></span>
+              </button>
+              <button
+                class="btn btn-danger btn-sm"
+                type="button"
+                id="carousel-play"
+              >
+                <span class="fas fa-play"></span>
+              </button>
+            </div>
+
+            <!---->
           </div>
         </div>
       </div>
@@ -650,5 +672,30 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+
+    <!-- jquery was removed in bootstrap 5.0-->
+    <!-- javascript vanilla for carousel-->
+
+    <script>
+      // modify the data-bs-interval of the carousel
+      const myCarousel = document.querySelector("#mycarousel");
+      const carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 2000,
+      });
+
+      // pause the carousel on the click event
+      document
+        .getElementById("carousel-pause")
+        .addEventListener("click", function () {
+          carousel.pause();
+        });
+
+      // play the carousel on the click event
+      document
+        .getElementById("carousel-play")
+        .addEventListener("click", function () {
+          carousel.cycle();
+        });
+    </script>
   </body>
 </html>
