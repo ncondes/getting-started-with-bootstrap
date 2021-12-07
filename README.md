@@ -55,6 +55,3 @@ Users should be able to:
 
 - Website - [Nicolas Conde Salazar](https://www.ncondes.com)
 - Linkedin - [Nicolas Conde Salazar](https://www.linkedin.com/in/ncondes/)
-=======
-# Getting-Started-with-Bootstrap
->>>>>>> 7119c15d1a5f6c8f296d6cd4bdec47e402b33fc9
