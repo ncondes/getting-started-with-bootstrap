@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here]()
+- Solution URL: [Solution URL here](https://github.com/ncondes/getting-started-with-bootstrap)
 - Live Site URL: [Live site URL here]()
 
 ## My process
