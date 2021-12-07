@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ristorate con Fusion Website
 
 This website was built using mainly Bootstrap, using some preprocessors and some of JavaScript.
